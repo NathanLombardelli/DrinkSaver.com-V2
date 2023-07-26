@@ -165,7 +165,7 @@ var options = {
 
 function success(pos) {
     let Loading = $("#Loading");
-    Loading.innerText = "Position chargée";
+    Loading.text("Position chargée");
     Loading.css('color',"green");
     position = pos.coords;
 
