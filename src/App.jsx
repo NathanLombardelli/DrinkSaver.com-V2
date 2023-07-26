@@ -11,7 +11,7 @@ function App() {
             <Tris></Tris>
         </div>
         <p id="Loading">Recherche de votre position en cours, veuillez activé la localisation sur votre appareil</p>
-
+        <div id="resultList"></div>
     </>
   )
 }

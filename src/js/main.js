@@ -1,59 +1,62 @@
 import $ from 'jquery';
 /**************************  Search ***********************/
-var selectedValue = "";
 
-/* selection produits */
-let resultList = $("#resultList");
-let barsProx = [
-    {name:'Pots au lait',
-        latitude:50.6404338673672,
-        longitude:5.573335305493846,
-        mapurl:'https://goo.gl/maps/CoLmbzDcK88bDzFc8',
-        image:'potaulait.png',
-        minCardPrix:'10€',
-        ouverture:'16',
-        fermeture:'2',
-        exterieur:true,
-        interieur:true,
-        fumeur:true,
-        toilettes:true,
-        wifi:true,
-        toilettesPayante:true,
-        manger:true,
-        happyHour:'20h',
-        carte:[
-            {name:'jupiler',prix:1.80},
-            {name:'jupiler33',prix:2.10},
-            {name:'captain-morgan',prix:2.50},
-            {name:'chouffe',prix:3.20},
-        ]
-    },
-    {name:'Rock\'n roses',
-        latitude:50.641429076396086,
-        longitude:5.5687777457183865,
-        mapurl:'https://goo.gl/maps/YiX2bBFCanMxhobK8',
-        image:'RockNRosses.jpg',
-        minCardPrix:'5€',
-        ouverture:'17',
-        fermeture:'3',
-        exterieur:false,
-        interieur:true,
-        fumeur:false,
-        toilettes:false,
-        wifi:false,
-        toilettesPayante:false,
-        manger:false,
-        happyHour:'20h',
-        carte:[
-            {name:'jupiler',prix:2.40},
-            {name:'jupiler33',prix:2.90},
-            {name:'Bestiale-blonde',prix:4.40},
-            {name:'Val-dieu-triple',prix:5.20},
-        ]
-    }];
 
 /* selectize */
 $(document).ready(function() {
+
+
+    var selectedValue = "";
+
+    /* selection produits */
+    let resultList = $("#resultList");
+    let barsProx = [
+        {name:'Pots au lait',
+            latitude:50.6404338673672,
+            longitude:5.573335305493846,
+            mapurl:'https://goo.gl/maps/CoLmbzDcK88bDzFc8',
+            image:'potaulait.png',
+            minCardPrix:'10€',
+            ouverture:'16',
+            fermeture:'2',
+            exterieur:true,
+            interieur:true,
+            fumeur:true,
+            toilettes:true,
+            wifi:true,
+            toilettesPayante:true,
+            manger:true,
+            happyHour:'20h',
+            carte:[
+                {name:'jupiler',prix:1.80},
+                {name:'jupiler33',prix:2.10},
+                {name:'captain-morgan',prix:2.50},
+                {name:'chouffe',prix:3.20},
+            ]
+        },
+        {name:'Rock\'n roses',
+            latitude:50.641429076396086,
+            longitude:5.5687777457183865,
+            mapurl:'https://goo.gl/maps/YiX2bBFCanMxhobK8',
+            image:'RockNRosses.jpg',
+            minCardPrix:'5€',
+            ouverture:'17',
+            fermeture:'3',
+            exterieur:false,
+            interieur:true,
+            fumeur:false,
+            toilettes:false,
+            wifi:false,
+            toilettesPayante:false,
+            manger:false,
+            happyHour:'20h',
+            carte:[
+                {name:'jupiler',prix:2.40},
+                {name:'jupiler33',prix:2.90},
+                {name:'Bestiale-blonde',prix:4.40},
+                {name:'Val-dieu-triple',prix:5.20},
+            ]
+        }];
 
 
     // return '<div class="option">' +
@@ -87,6 +90,11 @@ $(document).ready(function() {
 /**************************  set list options ***********************/
 
 let select = $('#select-products');
+select.on('change',()=>{
+    selectedValue = $("#select-products option:selected").val();
+    UpdateBars(resultList,barsProx);
+});
+
 
 var produits = [];
 
@@ -229,7 +237,7 @@ TriInterieur.on("change",()=>{
 
 function UpdateBars(resultList,barsProx) {
 
-    resultList.innerText = ""; /* Remise a zero list bars */
+    $("#resultList").empty(); /* Remise a zero list bars */
 
     barsProx.forEach(bar=>{
         bar.carte.every(prod=>{
@@ -278,7 +286,7 @@ function CreateBarInfos(bar, prod) {
     infos.setAttribute("class", "infos"); // id = name bar
 
     let img = document.createElement("img");
-    img.setAttribute("src", "img/" + bar.image);
+    img.setAttribute("src", "../../src/img/" + bar.image);
 
     let barName = document.createElement("p");
     barName.setAttribute("class", "barName");
@@ -390,7 +398,7 @@ function CreateBarInfos(bar, prod) {
 
     elem.appendChild(link);
 
-    resultList.appendChild(elem);
+    $("#resultList").append(elem);
 }
 
 function getDistance(barLatitude,barLongitude) {
