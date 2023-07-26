@@ -1,1 +1,20 @@
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  min-height: 100vh;
+  background: #F0A101;
+  /*background: linear-gradient(#4C2C22,#0D0D0D,#0D0D0D);*/
+}
+
+.flex{
+  display: flex;
+}
+
 @import "scss/title";
+@import "scss/Tris";
+@import "scss/resultList";
+@import "scss/select";
