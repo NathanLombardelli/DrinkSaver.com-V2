@@ -95,6 +95,7 @@ body {
   border: black 1px solid;
 }
 .result a {
+  margin-right: 5px;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -223,7 +224,31 @@ i {
   }
 }
 #productInput {
+  width: 97vw;
+  padding: 1em 0 1em 1em;
+}
+
+datalist {
+  max-height: 150px;
+  overflow: scroll;
   width: 100%;
+}
+datalist option {
+  height: 1.5em;
+  font-size: 1em;
+  padding: 1em;
+  background-color: #ccc;
+  cursor: pointer;
+}
+datalist option:hover {
+  color: #fff;
+  background-color: red;
+  outline: 0 none;
+}
+datalist option:focus {
+  color: #fff;
+  background-color: #036;
+  outline: 0 none;
 }
 
 #Loading {

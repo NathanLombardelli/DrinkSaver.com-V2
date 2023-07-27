@@ -91,7 +91,6 @@ $(document).ready(function() {
 
 let select = $('#productInput');
 select.on('input',()=>{
-    console.log('event');
     selectedValue = $("#productInput").val();
     UpdateBars(resultList,barsProx);
 });
@@ -128,6 +127,7 @@ produits.forEach(p =>{
         selectedValue = p.name;
         UpdateBars(resultList,barsProx);
     });
+
     $('#select-products').append(newOption);
 });
 

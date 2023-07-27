@@ -10,11 +10,13 @@
 .result {
   border: black 1px solid;
   a {
+    margin-right: 5px;
     display: flex;
     align-items: center;
     text-decoration: none;
     color: black;
     justify-content: right;
+
     .infos {
       width: 100%;
       height: auto;

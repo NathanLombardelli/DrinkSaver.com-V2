@@ -1,9 +1,32 @@
-
-
 #productInput{
+  width: 97vw;
+  padding: 1em 0 1em 1em;
+}
+
+datalist {
+  max-height: 150px;
+  overflow: scroll;
   width: 100%;
 
+  option {
+    height: 1.5em;
+    font-size: 1em;
+    padding: 1em;
+    background-color: #ccc;
+    cursor: pointer;
+    &:hover{
+      color: #fff;
+      background-color: red;
+      outline: 0 none;
+    }
+    &:focus{
+      color: #fff;
+      background-color: #036;
+      outline: 0 none;
+    }
+  }
 }
+
 
 
 #Loading {

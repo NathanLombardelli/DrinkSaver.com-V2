@@ -18,4 +18,4 @@ Nathan Lombardelli
 
 ## Library
 
-- selectize
+- https://www.npmjs.com/package/datalist-css?activeTab=readme
