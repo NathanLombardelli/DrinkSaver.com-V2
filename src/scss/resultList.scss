@@ -1,71 +1,74 @@
-#resultList .result:nth-child(2n){
-  background: #FAE6B1;
-
+#resultList {
+  .result {
+    &:nth-child(2n) {
+      background: #FAE6B1;
+    }
+  }
 }
 
-.result{
+
+.result {
   border: black 1px solid;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    justify-content: right;
+    .infos {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      .barName {
+        font-size: 3.5em;
+        font-weight: bold;
+        grid-row: 1;
+        grid-column: 1/4;
+        text-align: center;
+        margin-bottom: 10%;
+      }
+      .prix {
+        font-size: 3.5em;
+        font-weight: bold;
+        grid-row: 2;
+        grid-column: 1;
+        text-align: center;
+      }
+      .distance {
+        font-size: 3.5em;
+        font-weight: bold;
+        grid-row: 2;
+        grid-column: 3;
+        text-align: center;
+      }
+      .icons {
+        grid-row: 3;
+        grid-column: 1/4;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: end;
+        margin-bottom: 10px;
+      }
+    }
+    img {
+      width: 25%;
+    }
+  }
 }
 
-.result a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color:black;
 
-}
-
-.result a{
-  display: flex;
-  justify-content: right;
-}
-.result a .infos{
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-.result a .infos .barName{
-  font-size: 3.5em;
-  font-weight: bold;
-  grid-row: 1;
-  grid-column: 1/4;
-  text-align: center;
-  margin-bottom: 10%;
-}
-
-.result a .infos .prix{
-  font-size: 3.5em;
-  font-weight: bold;
-  grid-row: 2;
-  grid-column: 1;
-  text-align: center;
-}
-
-.result a .infos .distance{
-  font-size: 3.5em;
-  font-weight: bold;
-  grid-row: 2;
-  grid-column: 3;
-  text-align: center;
-}
-.result a .infos .icons{
-  grid-row: 3;
-  grid-column: 1/4;
-  width: 100%;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: end;
-  margin-bottom: 10px;
-
-}
-
-i{
+i {
   font-size: 2em;
 }
 
-.result a img{
-  width: 25%;
+
+
+@media screen and (max-width: 800px) {
+
+
+
+
 }

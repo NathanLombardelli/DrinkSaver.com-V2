@@ -28,10 +28,10 @@ $(document).ready(function() {
             manger:true,
             happyHour:'20h',
             carte:[
-                {name:'jupiler',prix:1.80},
-                {name:'jupiler33',prix:2.10},
-                {name:'captain-morgan',prix:2.50},
-                {name:'chouffe',prix:3.20},
+                {name:'Jupiler 25cl',prix:1.80},
+                {name:'Jupiler 33cl',prix:2.10},
+                {name:'Captain morgan',prix:2.50},
+                {name:'Chouffe',prix:3.20},
             ]
         },
         {name:'Rock\'n roses',
@@ -51,10 +51,10 @@ $(document).ready(function() {
             manger:false,
             happyHour:'20h',
             carte:[
-                {name:'jupiler',prix:2.40},
-                {name:'jupiler33',prix:2.90},
-                {name:'Bestiale-blonde',prix:4.40},
-                {name:'Val-dieu-triple',prix:5.20},
+                {name:'Jupiler 25cl',prix:2.40},
+                {name:'Jupiler 33cl',prix:2.90},
+                {name:'Bestiale blonde',prix:4.40},
+                {name:'Val dieu triple',prix:5.20},
             ]
         }];
 
@@ -89,9 +89,9 @@ $(document).ready(function() {
 
 /**************************  set list options ***********************/
 
-let select = $('#select-products');
+let select = $('#productInput');
 select.on('change',()=>{
-    selectedValue = $("#select-products option:selected").val();
+    selectedValue = $("#productInput").val();
     UpdateBars(resultList,barsProx);
 });
 
@@ -121,32 +121,32 @@ produits.push({name: 'Duvel', image: 'Duvel'});
 
 
 
-produits.push({name: 'Framboise', image: 'jupiler'});
-produits.push({name: 'Hoegaarden blanche', image: 'jupiler'});
-produits.push({name: 'Hoegaarden rosée', image: 'jupiler'});
-produits.push({name: 'Kwak ambrèe', image: 'jupiler'});
-produits.push({name: 'Leffe blonde', image: 'jupiler'});
-produits.push({name: 'Leffe brune', image: 'jupiler'});
-produits.push({name: 'MILF', image: 'jupiler'});
-produits.push({name: 'Peak IPA', image: 'jupiler'});
-produits.push({name: 'Vedett IPA', image: 'jupiler'});
-produits.push({name: 'Pêcheresse', image: 'jupiler'});
-produits.push({name: 'Scotch CTS', image: 'jupiler'});
-produits.push({name: 'Troll', image: 'jupiler'});
-produits.push({name: 'Somersby', image: 'jupiler'});
-produits.push({name: 'Victoria', image: 'jupiler'});
-produits.push({name: 'Westmael triple', image: 'jupiler'});
-produits.push({name: 'Val Dieu blonde', image: 'jupiler'});
-produits.push({name: 'Val Dieu brune', image: 'jupiler'});
-produits.push({name: 'Val Dieu triple', image: 'jupiler'});
-produits.push({name: 'Val Dieu grand cru', image: 'jupiler'});
-produits.push({name: 'Val Dieu cuvèe 800', image: 'jupiler'});
+// produits.push({name: 'Framboise', image: 'jupiler'});
+// produits.push({name: 'Hoegaarden blanche', image: 'jupiler'});
+// produits.push({name: 'Hoegaarden rosée', image: 'jupiler'});
+// produits.push({name: 'Kwak ambrèe', image: 'jupiler'});
+// produits.push({name: 'Leffe blonde', image: 'jupiler'});
+// produits.push({name: 'Leffe brune', image: 'jupiler'});
+// produits.push({name: 'MILF', image: 'jupiler'});
+// produits.push({name: 'Peak IPA', image: 'jupiler'});
+// produits.push({name: 'Vedett IPA', image: 'jupiler'});
+// produits.push({name: 'Pêcheresse', image: 'jupiler'});
+// produits.push({name: 'Scotch CTS', image: 'jupiler'});
+// produits.push({name: 'Troll', image: 'jupiler'});
+// produits.push({name: 'Somersby', image: 'jupiler'});
+// produits.push({name: 'Victoria', image: 'jupiler'});
+// produits.push({name: 'Westmael triple', image: 'jupiler'});
+// produits.push({name: 'Val Dieu blonde', image: 'jupiler'});
+// produits.push({name: 'Val Dieu brune', image: 'jupiler'});
+// produits.push({name: 'Val Dieu triple', image: 'jupiler'});
+// produits.push({name: 'Val Dieu grand cru', image: 'jupiler'});
+// produits.push({name: 'Val Dieu cuvèe 800', image: 'jupiler'});
 
 
 /* boucle creation options */
 produits.forEach(p =>{
-    let newOption = new Option(p.name,p.image);
-    select.append(newOption);
+    let newOption = new Option(p.image,p.name);
+    $('#select-products').append(newOption);
 });
 
 

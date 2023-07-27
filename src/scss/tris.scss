@@ -1,57 +1,54 @@
-
-.tgl { /* invisible the box*/
-
-  display:none;
+.tgl {
+  display: none;
+  & + .tgl-btn {
+    width: 5em;
+    height: 3em;
+    cursor: pointer;
+  }
 }
-
-.tgl + .tgl-btn {
-
-  width: 5em; /* size box */
-  height: 3em; /* size box */
-  cursor: pointer;
+.tgl-skewed {
+  & + .tgl-btn {
+    overflow: hidden;
+    transform: skew(-10deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: all 0.2s ease;
+    font-family: sans-serif;
+    background: red;
+    &:after {
+      left: 100%;
+      content: attr(data-tg-on);
+      color: #fff;
+    }
+    &:before {
+      left: 0;
+      content: attr(data-tg-off);
+      color: #fff;
+    }
+    &:active {
+      background: #888;
+    }
+  }
+  &:checked {
+    & + .tgl-btn {
+      background: #86d993;
+      &:before {
+        left: -100%;
+      }
+      &:after {
+        left: 0;
+      }
+    }
+  }
 }
-
-.tgl-skewed + .tgl-btn { /* 1ere option */
-  overflow: hidden; /* cache l'autre option */
-  transform: skew(-10deg); /* inclinaison box */
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transition: all 0.2s ease; /* temps transition changement de couleurs */
-  font-family: sans-serif;
-  background: red; /* couleur de fond 1ère option */
-}
-.tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before { /* text */
-  transform: skew(10deg); /* remettre texte droit (ligne 21) */
-  transition: all 0.2s ease; /* temps de transition switch */
-  width: 100%; /* Taille du text (100% de la box pour centrer) */
+.tgl-skewed + .tgl-btn:after, .tgl-skewed + .tgl-btn:before {
+  transform: skew(10deg);
+  transition: all 0.2s ease;
+  width: 100%;
   text-align: center;
   position: absolute;
   line-height: 2em;
   font-size: 1.5em;
   font-weight: bold;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); /* shadow du texte */
-}
-.tgl-skewed + .tgl-btn:after {/* 2 eme texte*/
-  left: 100%; /* le mettre a droite */
-  content: attr(data-tg-on); /* contenu du 2eme texte = data-tg-on in html */
-  color:#fff;
-}
-.tgl-skewed + .tgl-btn:before { /* 1 er texte*/
-  left: 0;
-  content: attr(data-tg-off); /* contenu du 1er texte = data-tg-off in html */
-  color: #fff;
-}
-.tgl-skewed + .tgl-btn:active {
-  background: #888; /* couleur de fond l'ors de l'activation (grey) */
-}
-
-.tgl-skewed:checked + .tgl-btn { /* couleur de fond 2ème option*/
-  background: #86d993;
-}
-.tgl-skewed:checked + .tgl-btn:before {
-  left: -100%;
-}
-
-.tgl-skewed:checked + .tgl-btn:after {
-  left: 0;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }

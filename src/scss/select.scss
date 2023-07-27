@@ -1,85 +1,23 @@
-
-#Loading{
+#Loading {
   font-weight: bold;
   margin-top: 20px;
   font-size: 2.5em;
 }
 
-.rechercheBar{
-
-}
-
-.rechercheTris{
+.rechercheTris {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  justify-content: space-between;
+  margin: 10px;
+  flex-wrap: wrap;
+  font-size: 0.5em;
+  p {
+    font-size: 2.2em;
+    line-height: 1.5em;
+  }
 }
 
-li p{
-  margin-left: 10px;
-}
-
-.rechercheTris p{
-  font-size: 2.2em;
-  line-height: 1.5em;
-}
-
-.item{
-  font-size: 2em;
-}
-
-.selectize-control.single .selectize-input, .selectize-dropdown.single {
-
-}
-
-
-.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
-  padding-bottom: 1.5em;
-  padding-top: 1.5em;
-
-
-}
-
-.selectize-dropdown, .selectize-input, .selectize-input input {
-  height: 2em;
-  font-size: 2em !important;
-
-}
-
-.selectize-control.single .selectize-input, .selectize-control.single .selectize-input input{
-  font-size: 1.3em;
-
-}
-
-.selectize-control.single .selectize-input{
-  font-size: 2em;
-  display: flex;
-  align-items: center;
-
-}
-
-
-/* Style pour la taille des images */
-.selectize-dropdown .option .image img {
-  width: auto;
-  height: 100px;
-  margin-right: 5px;
-}
-
-.selectize-dropdown .option{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: #b67a01 1px solid;
-}
-
-.selectize-dropdown-content{
-  min-height: 90vh !important;
-  background: #F0A101;
-}
-
-
-.textSelect{
-  font-weight: bold;
-  font-size: 2rem;
+li {
+  p {
+    margin-left: 10px;
+  }
 }
