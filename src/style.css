@@ -13,6 +13,22 @@ body {
   display: flex;
 }
 
+.rechercheTris {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  flex-wrap: wrap;
+  font-size: 0.5em;
+}
+.rechercheTris li {
+  margin-left: 10px;
+}
+.rechercheTris li p {
+  margin-left: 10px;
+  font-size: 2.2em;
+  line-height: 1.5em;
+}
+
 .tgl {
   display: none;
 }
@@ -66,6 +82,11 @@ body {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
+@media screen and (max-width: 400px) {
+  .rechercheTris {
+    justify-content: space-around;
+  }
+}
 #resultList .result:nth-child(2n) {
   background: #FAE6B1;
 }
@@ -126,26 +147,89 @@ i {
   font-size: 2em;
 }
 
+@media screen and (max-width: 800px) {
+  .result a .infos .barName {
+    font-size: 2.5em;
+  }
+  .result a .infos .prix {
+    font-size: 2.5em;
+  }
+  .result a .infos .distance {
+    font-size: 2.5em;
+  }
+  .result a .infos .icons {
+    margin-bottom: 20px;
+  }
+  .result a .infos .icons div p {
+    font-size: 1.5em !important;
+  }
+  .result a img {
+    width: 25%;
+  }
+  i {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 550px) {
+  .result a .infos .barName {
+    font-size: 2em;
+  }
+  .result a .infos .prix {
+    font-size: 2em;
+  }
+  .result a .infos .distance {
+    font-size: 2em;
+  }
+  .result a .infos .icons {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .result a .infos .icons div p {
+    font-size: 1em !important;
+  }
+  .result a img {
+    width: 25%;
+  }
+  i {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 430px) {
+  .result a .infos {
+    margin-right: 10px;
+  }
+  .result a .infos .barName {
+    font-size: 2em;
+    margin-bottom: 5%;
+  }
+  .result a .infos .prix {
+    font-size: 2em;
+  }
+  .result a .infos .distance {
+    font-size: 2em;
+  }
+  .result a .infos .icons {
+    margin-bottom: 20px;
+    height: 50px;
+  }
+  .result a .infos .icons div p {
+    font-size: 1em !important;
+  }
+  .result a img {
+    width: 25%;
+  }
+  i {
+    font-size: 1em;
+  }
+}
+#productInput {
+  width: 100%;
+}
+
 #Loading {
   font-weight: bold;
   margin-top: 20px;
   font-size: 2.5em;
-}
-
-.rechercheTris {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
-  flex-wrap: wrap;
-  font-size: 0.5em;
-}
-.rechercheTris p {
-  font-size: 2.2em;
-  line-height: 1.5em;
-}
-
-li p {
-  margin-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

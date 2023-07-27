@@ -69,6 +69,116 @@ i {
 @media screen and (max-width: 800px) {
 
 
+  .result {
+    a {
+      .infos {
+        .barName {
+          font-size: 2.5em;
+        }
+        .prix {
+          font-size: 2.5em;
+        }
+        .distance {
+          font-size: 2.5em;
+        }
+        .icons {
+          margin-bottom: 20px;
+          div{
+            p{
+              font-size: 1.5em !important;
+            }
+          }
+        }
+      }
+      img {
+        width: 25%;
+      }
+    }
+  }
+
+  i {
+    font-size: 1.5em;
+  }
+
+
+}
+
+
+@media screen and (max-width: 550px) {
+
+
+  .result {
+    a {
+      .infos {
+        .barName {
+          font-size: 2em;
+        }
+        .prix {
+          font-size: 2em;
+        }
+        .distance {
+          font-size: 2em;
+        }
+        .icons {
+          margin-bottom: 20px;
+          height: 50px;
+          div{
+            p{
+              font-size: 1em !important;
+            }
+          }
+        }
+      }
+      img {
+        width: 25%;
+      }
+    }
+  }
+
+  i {
+    font-size: 1em;
+  }
+
+
+}
+
+
+@media screen and (max-width: 430px) {
+
+
+  .result {
+    a {
+      .infos {
+        margin-right: 10px;
+        .barName {
+          font-size: 2em;
+          margin-bottom: 5%;
+        }
+        .prix {
+          font-size: 2em;
+        }
+        .distance {
+          font-size: 2em;
+        }
+        .icons {
+          margin-bottom: 20px;
+          height: 50px;
+          div{
+            p{
+              font-size: 1em !important;
+            }
+          }
+        }
+      }
+      img {
+        width: 25%;
+      }
+    }
+  }
+
+  i {
+    font-size: 1em;
+  }
 
 
 }

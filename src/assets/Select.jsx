@@ -3,9 +3,8 @@ export const Select = () => {
     return (
 
         <>
-            <input type="text" id="productInput" list="select-products"/>
+            <input list="select-products" id="productInput" autoComplete="off" />
             <datalist id="select-products">
-                <option value="">Sélectionnez un produit</option>
             </datalist>
         </>
     );

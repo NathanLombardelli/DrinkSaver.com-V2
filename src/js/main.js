@@ -90,7 +90,8 @@ $(document).ready(function() {
 /**************************  set list options ***********************/
 
 let select = $('#productInput');
-select.on('change',()=>{
+select.on('input',()=>{
+    console.log('event');
     selectedValue = $("#productInput").val();
     UpdateBars(resultList,barsProx);
 });
@@ -120,32 +121,13 @@ produits.push({name: 'Despérados', image: 'Desperados'});
 produits.push({name: 'Duvel', image: 'Duvel'});
 
 
-
-// produits.push({name: 'Framboise', image: 'jupiler'});
-// produits.push({name: 'Hoegaarden blanche', image: 'jupiler'});
-// produits.push({name: 'Hoegaarden rosée', image: 'jupiler'});
-// produits.push({name: 'Kwak ambrèe', image: 'jupiler'});
-// produits.push({name: 'Leffe blonde', image: 'jupiler'});
-// produits.push({name: 'Leffe brune', image: 'jupiler'});
-// produits.push({name: 'MILF', image: 'jupiler'});
-// produits.push({name: 'Peak IPA', image: 'jupiler'});
-// produits.push({name: 'Vedett IPA', image: 'jupiler'});
-// produits.push({name: 'Pêcheresse', image: 'jupiler'});
-// produits.push({name: 'Scotch CTS', image: 'jupiler'});
-// produits.push({name: 'Troll', image: 'jupiler'});
-// produits.push({name: 'Somersby', image: 'jupiler'});
-// produits.push({name: 'Victoria', image: 'jupiler'});
-// produits.push({name: 'Westmael triple', image: 'jupiler'});
-// produits.push({name: 'Val Dieu blonde', image: 'jupiler'});
-// produits.push({name: 'Val Dieu brune', image: 'jupiler'});
-// produits.push({name: 'Val Dieu triple', image: 'jupiler'});
-// produits.push({name: 'Val Dieu grand cru', image: 'jupiler'});
-// produits.push({name: 'Val Dieu cuvèe 800', image: 'jupiler'});
-
-
 /* boucle creation options */
 produits.forEach(p =>{
-    let newOption = new Option(p.image,p.name);
+    let newOption = new Option(p.name);
+    newOption.addEventListener('click',()=>{
+        selectedValue = p.name;
+        UpdateBars(resultList,barsProx);
+    });
     $('#select-products').append(newOption);
 });
 
