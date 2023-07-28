@@ -2,12 +2,29 @@
 
 function createConnection()
 {
-// Informations de connexion à la base de données
-    $host = 'be820041-001.eu.clouddb.ovh.net'; // Remplace par le nom d'hôte de ta base de données
-    $username = 'technique'; // Remplace par le nom d'utilisateur de ta base de données
-    $password = 'Awxcert1999'; // Remplace par le mot de passe de ta base de données
-    $dbname = 'drinksaverDB'; // Remplace par le nom de ta base de données
-    $port = '35718';
+
+    function loadEnv($path = '.env') {
+        // Obtient le chemin absolu du fichier .env en fonction de l'emplacement du script en cours d'exécution
+        $envFilePath = __DIR__ . DIRECTORY_SEPARATOR . $path;
+
+        if (!file_exists($envFilePath)) {
+            throw new \Exception('The .env file not found.');
+        }
+
+        $lines = file($envFilePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        foreach ($lines as $line) {
+            putenv($line);
+        }
+    }
+
+
+    loadEnv('../../.env');
+
+    $host = getenv("DB_HOST");
+    $username = getenv("DB_USERNAME");
+    $password = getenv("DB_PASSWORD");
+    $dbname = getenv("DB_DBNAME");
+    $port = getenv("DB_PORT");
 
 // Crée une connexion à la base de données
     $conn = new mysqli($host, $username, $password, $dbname, $port);

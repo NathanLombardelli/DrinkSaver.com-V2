@@ -1,11 +1,5 @@
 import $ from 'jquery';
-import {createConnection} from "./dbConnection.js";
 /**************************  Search ***********************/
-
-createConnection().connect(function(err) {
-    if (err) throw err;
-    console.log("Connected!");
-});
 
 /* selectize */
 $(document).ready(function() {
@@ -64,34 +58,6 @@ $(document).ready(function() {
         }];
 
 
-    // return '<div class="option">' +
-    //     '<span class="image"><img src="img/' + data.value + '.png"  alt=" ' + data.text + ' " /></span>' +
-    //     '<span class="textSelect">' + data.text + '</span>' +
-    //     '</div>';
-
-        // $('#select-products').selectize({
-        //     render: {
-        //         option: function (data) {
-        //             return '<div class="option">' +
-        //                 '<span class="image"><img src="img/' + data.value + '.png"  alt=" ' + data.text + ' " /></span>' +
-        //                 '<span class="textSelect">' + data.text + '</span>' +
-        //                 '</div>';
-        //         }
-        //     },
-        //     sortField: 'text',
-        //     maxOptions: 9999,
-        //     onInitialize: function () {
-        //         this.trigger('change', this.getValue(), true);
-        //     },
-        //     onChange: function () {
-        //         selectedValue = $("#select-products option:selected").val();
-        //         UpdateBars(resultList,barsProx);
-        //     },
-        //     dropdownParent: 'body'
-        // });
-
-
-
 /**************************  set list options ***********************/
 
 let select = $('#productInput');
@@ -102,6 +68,19 @@ select.on('input',()=>{
 
 
 var produits = [];
+
+/********************* test mysql getProducts ************************/
+
+// fetch('./src/php/getAllAlcools.php',{ method: "GET"}).then(result => result).then(json => {
+//    console.log(json);
+// });
+
+    $.get('./src/php/getAllAlcools.php', function (data) {
+        // Do something with the data
+        console.log(data);
+    })
+
+
 
 /* boucle tab produit bd */
 
