@@ -1,6 +1,11 @@
 import $ from 'jquery';
+import {createConnection} from "./dbConnection.js";
 /**************************  Search ***********************/
 
+createConnection().connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+});
 
 /* selectize */
 $(document).ready(function() {
