@@ -1,0 +1,20 @@
+
+main.js: line 72 comment and un comment for using bdd
+
+npx vite build
+
+change dist filename :
+.js -> main.js
+.css -> style.css
+
+
+index.html:
+comment
+<!--    <script type="module" src="./src/main.jsx"></script>-->
+add
+    <link rel="stylesheet" href="src/style.css">
+
+
+ajouter tout sauf dist et node_modules
+puis
+ramplacer main.js et style.css par les fichiers dans dist

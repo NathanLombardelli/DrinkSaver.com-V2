@@ -71,15 +71,24 @@ var produits = [];
 
 /********************* test mysql getProducts ************************/
 
-// fetch('./src/php/getAllAlcools.php',{ method: "GET"}).then(result => result).then(json => {
-//    console.log(json);
+// fetch('./src/php/getAllAlcools.php',{ method: "GET"}).then(result => result.json()).then(json => {
+//    json.forEach(p =>{
+//        produits.push({name: p["Name"], image: p["Image"]});
+//    });
+// }).then(()=>{
+//
+//     /* boucle creation options */
+//     produits.forEach(p =>{
+//         let newOption = new Option(p.name);
+//         newOption.addEventListener('click',()=>{
+//             selectedValue = p.name;
+//             UpdateBars(resultList,barsProx);
+//         });
+//
+//         $('#select-products').append(newOption);
+//     });
+//
 // });
-
-    $.get('./src/php/getAllAlcools.php', function (data) {
-        // Do something with the data
-        console.log(data);
-    })
-
 
 
 /* boucle tab produit bd */
@@ -103,17 +112,16 @@ produits.push({name: 'Curtius smash', image: 'Curtius-smash'});
 produits.push({name: 'Despérados', image: 'Desperados'});
 produits.push({name: 'Duvel', image: 'Duvel'});
 
+    /* boucle creation options */
+    produits.forEach(p =>{
+        let newOption = new Option(p.name);
+        newOption.addEventListener('click',()=>{
+            selectedValue = p.name;
+            UpdateBars(resultList,barsProx);
+        });
 
-/* boucle creation options */
-produits.forEach(p =>{
-    let newOption = new Option(p.name);
-    newOption.addEventListener('click',()=>{
-        selectedValue = p.name;
-        UpdateBars(resultList,barsProx);
+        $('#select-products').append(newOption);
     });
-
-    $('#select-products').append(newOption);
-});
 
 
 

@@ -257,4 +257,89 @@ datalist option:focus {
   font-size: 2.5em;
 }
 
+footer {
+  background-color: #31525B;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 99999;
+}
+footer a {
+  text-decoration: none;
+  color: #B3DEE5;
+}
+footer a:hover {
+  color: #DD5201;
+  cursor: pointer;
+}
+footer a i {
+  font-size: 5em;
+  margin: 15px 0 15px 0;
+}
+
+#GamePage {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  z-index: 100;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 15px;
+}
+
+.catGame {
+  width: 250px;
+  height: 250px;
+  border: black 2px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5em;
+  padding: 5px;
+}
+.catGame p {
+  margin-top: 10px;
+  text-align: center;
+}
+.catGame img {
+  width: 50%;
+}
+
+#EventPage {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: blue;
+  z-index: 100;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 15px;
+}
+
+.catEvent {
+  width: 250px;
+  height: 250px;
+  border: black 2px solid;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2.5em;
+  padding: 5px;
+}
+.catEvent p {
+  margin-top: 10px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,21 @@
+footer {
+  background-color: #31525B;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 99999;
+  a {
+    text-decoration: none;
+    color: #B3DEE5;
+    &:hover {
+      color: #DD5201;
+      cursor: pointer;
+    }
+    i {
+      font-size: 5em;
+      margin: 15px 0 15px 0;
+    }
+  }
+}
