@@ -8,6 +8,8 @@ import {EventPage} from "./assets/EventPage.jsx";
 
 function App() {
 
+
+
  return (
     <BrowserRouter>
         <Routes>
@@ -21,8 +23,8 @@ function App() {
                     <div id="resultList"></div>
 
 
-                    {/*  create root for bottom menu  */}
                     <Footer/>
+
                 </>
             }/>
 
