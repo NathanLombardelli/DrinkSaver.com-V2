@@ -4,17 +4,10 @@ header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 require './db_connection.php';
-//require './verifKey.php';
-//
-$conn = createConnection();
-//
-//$keyUrl = '';
-//
-//if ( isset($_GET['key']) ) {
-//    $keyUrl = $_GET["key"];
-//}
 
-if ($conn != null ) { //&& $keyUrl != ''  && verifKey($conn, $keyUrl)
+$conn = createConnection();
+
+if ($conn != null ) {
 
 
     // Récupérer le corps de la requête
