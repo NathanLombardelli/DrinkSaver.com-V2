@@ -11,7 +11,7 @@ require './db_connection.php';
 
     if ($conn != null) {
 
-        $jsonBody = file_get_contents('php://input');
+        $jsonBody = file_get_contents('api://input');
         $body = json_decode($jsonBody, true);
         $idBar = $body['idBar'];
         $offset = $body['offset'];

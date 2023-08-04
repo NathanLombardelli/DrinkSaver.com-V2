@@ -75,7 +75,7 @@ import $ from 'jquery';
 
         /********************* test mysql getProducts ************************/
 
-// fetch('./src/php/getAllAlcools.php',{ method: "GET"}).then(result => result.json()).then(json => {
+// fetch('./src/api/getAllAlcools.api',{ method: "GET"}).then(result => result.json()).then(json => {
 //    json.forEach(p =>{
 //        produits.push({name: p["Name"], image: p["Image"]});
 //    });

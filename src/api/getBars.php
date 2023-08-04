@@ -4,14 +4,21 @@ header("Access-Control-Allow-Methods: GET, POST");
 header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 
 require './db_connection.php';
-
-
+//require './verifKey.php';
+//
 $conn = createConnection();
+//
+//$keyUrl = '';
+//
+//if ( isset($_GET['key']) ) {
+//    $keyUrl = $_GET["key"];
+//}
 
-if ($conn != null) {
+if ($conn != null ) { //&& $keyUrl != ''  && verifKey($conn, $keyUrl)
+
 
     // Récupérer le corps de la requête
-    $jsonBody = file_get_contents('php://input');
+    $jsonBody = file_get_contents('api://input');
     $body = json_decode($jsonBody, true);
 
     $checkFumeur = $body['checkFumeur'];
@@ -108,8 +115,7 @@ if ($conn != null) {
         echo json_encode(array());
     }
 
-    $conn->close();
-
 }else{
     echo json_encode(array());
 }
+$conn->close();

@@ -2,7 +2,6 @@
 
 function createConnection()
 {
-
     function loadEnv($path = '.env') {
         // Obtient le chemin absolu du fichier .env en fonction de l'emplacement du script en cours d'exécution
         $envFilePath = __DIR__ . DIRECTORY_SEPARATOR . $path;
@@ -18,7 +17,7 @@ function createConnection()
     }
 
 
-    loadEnv('../../.env');
+    loadEnv('../.env');
 
     $host = getenv("DB_HOST");
     $username = getenv("DB_USERNAME");
@@ -26,31 +25,19 @@ function createConnection()
     $dbname = getenv("DB_DBNAME");
     $port = getenv("DB_PORT");
 
-// Crée une connexion à la base de données
-    $conn = new mysqli($host, $username, $password, $dbname, $port);
 
 // Vérifie si la connexion a échoué
-    if ($conn->connect_error) {
-        return null;
-    }else{
-        return $conn;
-    }
-}
-
-function selectTest()
-{
-
-    $conn = createConnection();
-
-    if ($conn != null) {
-
-        $sql = 'SELECT * FROM produits ORDER BY name';
-
-        foreach ($conn->query($sql) as $row) {
-            print $row['Name'] . "\t";
-            print  $row['Image'] . "\n";
+    try{
+        $conn = new mysqli($host, $username, $password, $dbname, $port);
+        if ($conn->connect_error) {
+            return null;
+        }else{
+            return $conn;
         }
+    } catch(Exception  $error){
+        echo $error ;
     }
+
 
 
 }
