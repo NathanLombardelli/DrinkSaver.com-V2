@@ -1,0 +1,18 @@
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  label{
+    margin-top: 15px;
+  }
+  input{
+    margin-top: 15px;
+  }
+  #checkBoxsBar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}

@@ -5,6 +5,7 @@ import {Footer} from "./assets/Footer.jsx";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {GamePage} from "./assets/GamePage.jsx";
 import {EventPage} from "./assets/EventPage.jsx";
+import {FormBars} from "./assets/FormBars.jsx";
 
 function App() {
 
@@ -30,8 +31,9 @@ function App() {
 
             <Route path="GamePage" element={
                 <>
-                    <GamePage/>
-                    <Footer/>
+                    <FormBars/>
+                    {/*<GamePage/>*/}
+                    {/*<Footer/>*/}
                 </>
             }/>
 

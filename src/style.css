@@ -342,4 +342,22 @@ footer a i {
   text-align: center;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+form label {
+  margin-top: 15px;
+}
+form input {
+  margin-top: 15px;
+}
+form #checkBoxsBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 /*# sourceMappingURL=style.css.map */
