@@ -6,6 +6,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {GamePage} from "./assets/GamePage.jsx";
 import {EventPage} from "./assets/EventPage.jsx";
 import {FormBars} from "./assets/FormBars.jsx";
+import {FormAlcool} from "./assets/FormAlcool.jsx";
 
 function App() {
 
@@ -46,6 +47,13 @@ function App() {
             <Route path="EventPage" element={
                 <>
                     <EventPage/>
+                    <Footer/>
+                </>
+            }/>
+
+            <Route path="/FormAlcool" element={
+                <>
+                    <FormAlcool/>
                     <Footer/>
                 </>
             }/>

@@ -10,6 +10,7 @@ export const Footer = () => {
                 <Link to="/EventPage"><i className="fa-solid fa-calendar-check"></i></Link>
                 <Link to="/GamePage"><i className="fa-solid fa-dice"></i></Link>
                 <Link to="/FormBars"><i className="fa-solid fa-house-medical"></i></Link>
+                <Link to="/FormAlcool"><i className="fa-solid fa-beer-mug-empty"></i></Link>
             </footer>
 
     );

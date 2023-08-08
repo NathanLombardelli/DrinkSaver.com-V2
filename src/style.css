@@ -279,6 +279,12 @@ footer a i {
   margin: 15px 0 15px 0;
 }
 
+@media screen and (max-width: 550px) {
+  footer a i {
+    font-size: 2.5em;
+    margin: 15px 0 15px 0;
+  }
+}
 #GamePage {
   display: flex;
   height: 100vh;
