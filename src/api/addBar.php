@@ -108,11 +108,10 @@ if ($conn != null ) {
     $error[] = 'Success';
     echo json_encode($error);
 
-    header('Location: http://www.votresite.com/pageprotegee.php');
+    header('Location: https://drinksaver.be/#/FormBars?result=1');
     exit();
 
 }else{
-    $error =  array();
-    $error[] = 'Erreur de connection a la Base de Donnée';
-    echo json_encode($error);
+    header('Location: https://drinksaver.be/#/FormBars?result=1');
+    exit();
 }

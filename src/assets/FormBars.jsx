@@ -4,6 +4,17 @@ import {useEffect} from 'react';
 export const FormBars = () => {
 
     useEffect(() => {
+
+        //get param url (error or success message).
+        const urlParams = new URLSearchParams(window.location.search);
+        if(urlParams.has('result')){
+            if(urlParams.get('result') === '1'){
+                document.getElementsByClassName('SuccessMessage')[0].style.display = 'inline';
+            }else{
+                document.getElementsByClassName('ErrorMessage')[0].style.display = 'inline';
+            }
+        }
+
         // get lat and long from maps url
             document.getElementById('barsMapUrlInput').addEventListener('change',(event)=>{
             let mapsUrl = event.target.value; // ex https://www.google.com/maps/place/Le+Pot+au+Lait,+Rue+Soeurs-de-Hasque+9,+4000+Liège/@50.643252,5.5734209,16z/data=!4m6!3m5!1s0x47c0fa0f9cd88837:0x4da5119b47d37815!8m2!3d50.64043!4d5.5733313!16s%2Fg%2F1tcxyznk
@@ -24,6 +35,9 @@ export const FormBars = () => {
 
     return (
         <>
+            <h2 className={'SuccessMessage'}>Success</h2>
+            <h2 className={'ErrorMessage'}>Error</h2>
+
             <form method={'POST'} action={'https://drinksaver.be/php/addBar.php'}>
                 <label>Bars Name</label>
                 <input type='text' id='barsNameInput' name={'Name'}/>

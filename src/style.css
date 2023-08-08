@@ -342,6 +342,16 @@ footer a i {
   text-align: center;
 }
 
+.SuccessMessage {
+  color: green;
+  display: none;
+}
+
+.ErrorMessage {
+  color: red;
+  display: none;
+}
+
 form {
   display: flex;
   flex-direction: column;

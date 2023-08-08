@@ -29,7 +29,7 @@ function App() {
                 </>
             }/>
 
-            <Route path="GamePage" element={
+            <Route path="/GamePage" element={
                 <>
                     <GamePage/>
                     <Footer/>
