@@ -30,9 +30,9 @@ export const FormBars = () => {
                 <label>Maps Url</label>
                 <input type='text' id='barsMapUrlInput' name={'MapsUrl'}/>
 
-                <label>Latitude</label>
+                <label>Latitude<span> * autocomplétion avec url google map (mais pas très précis)</span></label>
                 <input type='text' id='barsLatInput' name={'Latitude'}/>
-                <label>Longitude</label>
+                <label>Longitude<span> * autocomplétion avec url google map (mais pas très précis)</span></label>
                 <input type='text' id='barsLongInput' name={'Longitude'}/>
 
 

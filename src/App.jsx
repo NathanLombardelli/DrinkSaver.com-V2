@@ -31,9 +31,15 @@ function App() {
 
             <Route path="GamePage" element={
                 <>
+                    <GamePage/>
+                    <Footer/>
+                </>
+            }/>
+
+            <Route path="FormBars" element={
+                <>
                     <FormBars/>
-                    {/*<GamePage/>*/}
-                    {/*<Footer/>*/}
+                    <Footer/>
                 </>
             }/>
 

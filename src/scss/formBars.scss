@@ -3,9 +3,12 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-bottom: 250px;
   label{
     margin-top: 15px;
+    span{
+      color: #dd5201;
+    }
   }
   input{
     margin-top: 15px;
@@ -14,5 +17,9 @@ form{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
+  }
+  img{
+    margin-top: 10px;
+    width: 200px;
   }
 }

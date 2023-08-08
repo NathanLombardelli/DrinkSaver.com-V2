@@ -347,10 +347,13 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  margin-bottom: 250px;
 }
 form label {
   margin-top: 15px;
+}
+form label span {
+  color: #dd5201;
 }
 form input {
   margin-top: 15px;
@@ -358,6 +361,10 @@ form input {
 form #checkBoxsBar {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+form img {
+  margin-top: 10px;
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */
